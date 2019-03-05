@@ -77,11 +77,11 @@ summary(mloa2)
 
 # write a function called plot_temp that returns a graph of the temp_C_2m for a single month. The x-axis of the graph should be pulled from a datetime column
 
-plot_temp <- function(a, data = mloa2) {
-  df <- filter(data, month == a)
+plot_temp <- function(a, dat = mloa2) {
+  df <- filter(dat, month == a)
   plot <- ggplot(df, aes(x = datetime, y = temp_C_2m)) +
     geom_line()
   return(plot)
 }
 
-plot_temp(1, data = mloa2) #test
+plot_temp(1, dat = mloa2) #test
